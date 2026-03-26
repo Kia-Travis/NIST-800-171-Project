@@ -164,22 +164,18 @@ Identified gaps tracked for remediation — because honest self-assessment is pa
 ## Repository Structure
 
 ```
-NIST-800-171-ISSO-Project/
-├── README.md                                      ← You are here
-├── docs/
-│   ├── SSP.pdf                                    ← System Security Plan
-│   └── POAM_ProjectA.pdf                          ← Plan of Action & Milestones
-├── project-guide/
-│   └── NIST 800-171 Implementation Project.pdf   ← Step-by-step implementation guide
-├── screenshots/                                   ← Terminal evidence artifacts
-│   ├── baseline-assessment.png
-│   ├── ssh-key-auth.png
-│   ├── ufw-status.png
-│   ├── auditd-rules.png
-│   ├── account-lockout-test.png
-│   └── encrypted-files.png
-└── configs/
-    └── isso-audit.rules                           ← Custom auditd ruleset
+NIST-800-171-Project/
+├── README.md                                    ← You are here
+├── SSP.pdf                                      ← System Security Plan
+├── POAM_ProjectA.pdf                            ← Plan of Action & Milestones
+├── NIST 800-171 Implementation Project.pdf      ← Step-by-step implementation guide
+├── isso-audit.rules                             ← Custom auditd ruleset
+├── baseline-assessment.png                      ← Baseline security assessment output
+├── ssh-key-auth.png                             ← SSH key authentication validation
+├── ufw-status.png                               ← UFW firewall configuration
+├── auditd-rules.png                             ← Loaded audit rules verification
+├── account-lockout-test.png                     ← Account lockout policy test
+└── encrypted-files.png                          ← Encrypted CUI files in sensitive-data/
 ```
 
 ---
