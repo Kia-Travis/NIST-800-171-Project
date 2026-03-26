@@ -1,0 +1,30 @@
+# ISSO Project Audit Rules - Phase 2
+# These rules track security-relevant activities
+
+# Watch authentication attempts (logins and sudo)
+-w /var/log/auth.log -p wa -k authentication
+-w /var/log/faillog -p wa -k login_failures
+
+# Watch user account modifications
+-w /etc/passwd -p wa -k user_accounts
+-w /etc/group -p wa -k user_groups
+-w /etc/shadow -p wa -k passwords
+-w /etc/gshadow -p wa -k passwords
+
+# Watch SSH configuration changes
+-w /etc/ssh/sshd_config -p wa -k ssh_config
+
+# Watch sudo configuration
+-w /etc/sudoers -p wa -k sudoers
+-w /etc/sudoers.d/ -p wa -k sudoers
+
+# Watch file deletion and modification
+-a always,exit -F arch=b64 -S unlink -S unlinkat -S rename -S renameat -k file_deletion
+-a always,exit -F arch=b64 -S chmod -S fchmod -S fchmodat -k file_permissions
+
+# Watch privileged command execution
+-a always,exit -F path=/usr/bin/sudo -F perm=x -k privileged_commands
+-a always,exit -F path=/usr/bin/passwd -F perm=x -k privileged_commands
+
+# Watch sensitive file access
+-w /home/sassysyntax/sensitive-data/ -p rwxa -k sensitive_access
