@@ -11,7 +11,7 @@
 
 IT professional with hands-on DoD environment experience actively transitioning into cybersecurity, targeting ISSO and Cybersecurity Analyst roles in the Huntsville defense contracting space.
 
-- CompTIA Security+ | CompTIA CySA+
+- CompTIA CySA+ |CompTIA Security+ 
 - Tier 2 Service Desk — DoD Contractor Environment
 - Huntsville, AL — Redstone Arsenal ecosystem
 
